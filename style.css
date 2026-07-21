@@ -1,39 +1,66 @@
-body{
-
-margin:0;
-
-background:#48B7FF;
-
-font-family:Arial,sans-serif;
-
-color:white;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-height:100vh;
-
+/* Configuración general de la pantalla */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0b1d33;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-#loading-screen{
-
-text-align:center;
-
+/* Contenedor del Juego (Usa el fondo del acuario) */
+#game-container {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    background-image: url('https://github.io'); /* Si tienes la imagen en tu repo, cámbiale el nombre aquí */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-h1{
-
-font-size:48px;
-
-margin-bottom:10px;
-
+/* Panel de estadísticas en la esquina izquierda */
+.stats-panel {
+    background: rgba(0, 20, 40, 0.75);
+    border: 2px solid #1a5f7a;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    backdrop-filter: blur(5px);
 }
 
-p{
-
-font-size:22px;
-
+.stat-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
 }
+
+/* Botón interactivo de Alimentar */
+#boton-alimentar {
+    background: linear-gradient(135deg, #ff9900, #e65c00);
+    border: 2px solid #fff;
+    border-radius: 12px;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(230, 92, 0, 0.4);
+    transition: transform 0.1s ease;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#boton-alimentar:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
