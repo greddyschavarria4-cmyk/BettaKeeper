@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BettaKeeper</title>
+    <title>BettaKeeper - Acuario Animado</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Contenedor Principal del Juego -->
     <div id="game-container">
-        <!-- Panel de Estadísticas -->
-        <div class="stats-panel">
-            <div class="stat-item">Monedas: <span id="cantidad-monedas">50</span></div>
-            <div class="stat-item">Hambre: <span id="porcentaje-hambre">82%</span></div>
-        </div>
+        <!-- El lienzo interactivo donde se dibujará todo el juego -->
+        <canvas id="aquariumCanvas" width="800" height="450"></canvas>
         
-        <!-- Botón de Alimentar -->
-        <button id="boton-alimentar">Alimentar</button>
+        <!-- Botón de alimentar flotante encima del acuario -->
+        <button id="boton-alimentar">Feed</button>
     </div>
 
-    <!-- Archivo de programación de fondo -->
+    <!-- Cargamos el script con la lógica de animación -->
     <script src="script.js"></script>
 </body>
 </html>
